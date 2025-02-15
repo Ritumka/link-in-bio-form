@@ -33,7 +33,15 @@
         <a class="link-text" target="_blank" href="<%= the_item.link_url %>">
           <%= the_item.link_description %>
         </a>
+        <a href="/delete_item/<%= the_item.id %>">Delete</a>
       </div>
     <% end %>
   </div>
+
+  <form action="/delete_all" method="post">
+    <button>Delete all</button>
+  </form>
+    <form action="/backdoor" method="get">
+    <button>Add item</button>
+  </form>
 </div>
